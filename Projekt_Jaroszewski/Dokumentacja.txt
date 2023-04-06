@@ -1,0 +1,13 @@
+Cel programu:
+Zadaniem programu jest zbadanie czy dana strona zmieniła swoją treść od ostatniego uruchomienia.
+
+Co składa się na projekt:
+-skrypt projekt1.sh
+-plik ze stronami nazwany "strony.txt", w której znajdują się cztery przykładowe strony.
+-Dokumentacja
+
+Jakie pliki otrzymamy po wykonaniu programu:
+Po wykonaniu otrzymamy pliki z zapisanym kodem strony, NIE WOLNO ich usuwać ponieważ przechowują one starą zawartość stron, która jest potrzebna do porównania zmian.
+
+Działanie programu:
+Na początku programu sprawdzamy, z jakimi został wywołanymi argumentami, jeżeli program został uruchomimy bez argumentów zadziała on zgodnie z przeznaczeniem, w przypadku jedynki wyświetli się pomoc, w innym przypadku program się zakończy. W funkcji main na początku sprawdzamy, czy jest pobrany 'curl', jeżeli tak to przechodzimy dalej, jeżeli nie to zostaje on pobrany. Następnie pobieramy z pliku „strony.txt” strony do sprawdzenia, strony MUSZĄ być wprowadzone po spacji i plik musi zostać zapisany. Następnie zapisujemy strony do tablicy pages (), po czym w zależności od długości tablicy pages () tworzymy odpowiednią ilość plików do przechowywania zapisanych stron. Następnie tworzymy pętlę for po wszystkich stronach w tablicy pages () i zapisujemy do zmiennych, które później porównujemy ze sobą i wyświetlamy komunikat na konsolę. W przypadku gdy nastąpiła zmiana strony, nowa zawartość strony jest zapisaywna do pliku. Funkcja get_page_content () pobiera przy pomocy 'curl' zawartość strony, jeżeli nie będzie mogła pobrać strony wyświetli odpowiedni komunikat.
